@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset some defaults */
 * {
   margin: 0;
   padding: 0;
@@ -6,87 +6,73 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: #f9f9f9;
   color: #333;
+  background-color: #f9f9f9;
 }
 
-/* Header */
+/* Navbar */
 header {
+  background: #003366;
+  color: #fff;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1e3a8a; /* Deep Blue */
-  color: white;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .logo img {
-  height: 50px;
-  width: auto;
+  width: 40px;
+  height: 40px;
 }
 
-.logo h1 {
-  font-size: 1.8em;
-  color: white;
-  margin: 0;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-nav a {
-  color: white;
+.nav-links a {
+  color: #fff;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #f97316; /* Bright Orange */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff6600;
 }
 
-/* Hero Section */
+/* Hero Sections */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to right, #1e3a8a, #f97316);
-  color: white;
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
 }
 
-.hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
+.small-hero {
+  padding: 2rem;
+  background: #003366;
 }
 
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 25px;
-}
-
-.btn {
-  background: white;
-  color: #1e3a8a;
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #f97316;
-  color: white;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background: #1e3a8a;
-  color: white;
-  padding: 20px;
-  margin-top: 50px;
-}
+/* Main content */
+main.content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-
